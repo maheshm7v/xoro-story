@@ -5,8 +5,8 @@ const Task = require("../models/Task.model.js")
 
 
 // get, post, put/patch, delete
-router.get('/all-task',createTaskController.getTask)
-router.post('/add-task',createTaskController.createTask)
-router.put('/update/:id',createTaskController.updateTask)
-router.delete('/delete/:id',createTaskController.deleteTask)
+router.get('/',createTaskController.getTask)
+router.post('/',createTaskController.createTask)
+router.put('/:id',createTaskController.updateTask)
+router.delete('/:id',createTaskController.deleteTask)
 module.exports = router
