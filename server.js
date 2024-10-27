@@ -3,10 +3,12 @@ const dotEnv = require('dotenv')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const taskRoutes = require('./routes/task.routes.js')
+const cors = require('cors');
 
 const app = express()
 
 const PORT = process.env.PORT || 5000
+app.use(cors());
 
 dotEnv.config()
 app.use(bodyParser.json())
